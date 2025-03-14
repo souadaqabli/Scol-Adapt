@@ -1,0 +1,170 @@
+body {
+    background: url('image/login_tutor_bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: "Spartan", sans-serif;
+}
+
+/* Conteneur principal */
+.main-container {
+    display: flex;
+    justify-content: space-between; /* Espace égal entre l'image et le formulaire */
+    align-items: center;
+    margin: auto;
+    max-width: 1000px; /* Largeur totale alignée avec le texte en bas */
+    padding: 20px;
+    gap: 20px; /* Espace entre l'image et le formulaire */
+}
+
+/* Conteneur pour l'image */
+.image-container img {
+    width: 460px; /* Carré de 360x360px */
+    height: 460px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Conteneur pour le formulaire */
+.login-container {
+    width: 460px; /* Carré de 360x360px */
+    height: 460px;
+    padding: 30px;
+    background: rgba(245, 245, 245, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Titre du formulaire */
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #835AF1;
+    text-align: center;
+}
+
+/* Champs du formulaire */
+.login-container .input-group {
+    margin-bottom: 20px;
+}
+
+.login-container .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #075eb2;
+}
+
+.login-container .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Champ mot de passe */
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 20px; /* Espace pour l'icône */
+}
+
+.password-container i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #075eb2;
+}
+
+/* Error message style */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* Bouton de connexion */
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #835AF1;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-container button:hover {
+    background: #7FA6EE;
+}
+
+/* Espacement entre le bouton et la phrase "You do not have an account?" */
+.login-container .input-group:last-child {
+    margin-top: 40px; /* Ajoute un espace de 5px entre le bouton et la phrase */
+}
+
+/* Lien de redirection */
+.login-container .input-group:last-child a {
+    font-size: 14px;
+    color: #075eb2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-container .input-group:last-child a:hover {
+    text-decoration: underline;
+}
+
+
+/* Informative text section */
+.info-text {
+    text-align: center;
+    margin: /*50px*/ auto;
+    max-width: 1000px;
+    padding: 10px;
+    background: rgba(245, 245, 245, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-text p {
+    color: #1E421C;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Les sections passent en vertical */
+        align-items: center;
+    }
+
+    .image-container img, 
+    .login-container {
+        width: 90%; /* Réduction de la largeur */
+        height: auto; /* Ajuste la hauteur */
+    }
+
+    .login-container {
+        margin-top: 20px; /* Ajout d'un espace entre les deux */
+    }
+
+    .explanatory-text {
+        width: 90%; /* Ajuste le texte pour les écrans plus petits */
+    }
+}

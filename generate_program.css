@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+    background: linear-gradient(135deg, #e6f5e6, #d0e7d0);
+    color: #333;
+}
+
+h2 {
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+form, .result {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 30px;
+    border: none;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+form:hover, .result:hover {
+    transform: translateY(-5px);
+}
+
+input, textarea, select {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+button {
+    background: linear-gradient(135deg, #4CAF50, #388E3C);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #388E3C, #2E7D32);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Style pour centrer et embellir le texte du diagnostic */
+.predicted-disorder {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #4CAF50;
+    background: #ffffff;
+    padding: 15px;
+    border: 1px solid #4CAF50;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tableau - alignement gauche du texte */
+.program-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.program-table th, 
+.program-table td {
+    padding: 18px;
+    border-bottom: 1px solid #ddd;
+    text-align: left; /* Aligner les cellules du tableau à gauche */
+}
+
+.program-table th {
+    text-align: center; /* Centrer les en-têtes du tableau */
+    background: #4CAF50;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.program-table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.program-table tr:hover {
+    background: #e8f5e9;
+}
+
+/* Style des messages d'erreur */
+.error {
+    color: #721c24;
+    background: #f8d7da;
+    border-left: 5px solid #dc3545;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Style de l'indication de chargement */
+.loading {
+    text-align: center;
+    font-size: 18px;
+    color: #388E3C;
+    margin-top: 20px;
+}
+
+.loading::after {
+    content: " ...";
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0% { content: " ."; }
+    50% { content: " .."; }
+    100% { content: " ..."; }
+}
