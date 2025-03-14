@@ -1,0 +1,17 @@
+# Fichiers d'environnement
+.env
+.env.local
+.env.*.local
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Dossiers de dépendances
+/vendor/
+/node_modules/
+
+# Logs et fichiers temporaires
+*.log
+/logs/
+/temp/
